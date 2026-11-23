@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1d36">
+<title>Riccardo Mariani | Portfolio di fotografia e grafica</title>
+<meta name="description" content="Scopri il portfolio di Riccardo Mariani. Otto progetti tra fotografia in Islanda e a Pantelleria, identità visiva e grafica editoriale, con gallerie e contatti.">
+<meta name="google-site-verification" content="Skdv3EGHGODLbs-m798pb30mMt-2o2yIPoQZ_E6FfM4">
+<link rel="canonical" href="https://riccardo-mariani.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Riccardo Mariani | Fotografia e grafica">
+<meta property="og:description" content="Otto progetti tra fotografia di paesaggio, identità visiva e grafica editoriale.">
+<meta property="og:url" content="https://riccardo-mariani.github.io/portfolio/">
+<meta property="og:image" content="https://riccardo-mariani.github.io/portfolio/img/islanda-26.jpg">
+<meta property="og:image:alt" content="Fiume intrecciato tra rilievi innevati in Islanda, fotografia di Riccardo Mariani">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+/* VOICE: calmo, editoriale, la voce di un giovane fotografo-grafico che osserva prima di scattare
+   IDEA: il portfolio stampato che si sfoglia — tavole, didascalie, numeri di pagina
+   PICTURE: le sue fotografie, grandi e a pieno campo; l'Islanda apre il sito
+   COLOUR and TYPE: blu notte del PDF, bianco, accento blu; Lato come nel portfolio
+   LAYOUT: hero a pieno schermo con banda blu, indice dei lavori, un capitolo per progetto, contatti in blu notte */
+:root{color-scheme:light dark;
+  --night:#0b1d36;--night2:#10264a;--accent:light-dark(#2b5fd9,#7da2ff);
+  --bg:light-dark(#ffffff,#0e1626);--soft:light-dark(#eef2f6,#16213a);
+  --ink:light-dark(#13263f,#e8edf5);--muted:light-dark(#5b6b7f,#a3b0c2);--line:light-dark(#dde3ea,#26334d)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Lato,system-ui,sans-serif;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.05;text-wrap:balance;font-weight:900;letter-spacing:-.01em}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(5vw,18px)}
+.band{padding:clamp(48px,7vw,110px) 0}
+.label{font-size:13px;font-weight:700;color:var(--accent);margin:0 0 10px}
+.lead{font-size:clamp(19px,2vw,23px);font-weight:300;line-height:1.45;margin:0}
+p{margin:0 0 14px;max-width:62ch}
+.muted{color:var(--muted)}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s,box-shadow .3s}
+header:not(.solid){background:linear-gradient(180deg,rgba(6,20,39,.81),rgba(6,20,39,.52) 65%,transparent)}
+header.solid{background:color-mix(in srgb,var(--night) 94%,transparent);backdrop-filter:blur(8px);box-shadow:0 1px 0 #ffffff14}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px;color:#fff}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}
+.mono{font-family:"Bodoni Moda",Didot,"Times New Roman",serif;font-size:26px;font-weight:400;line-height:1;letter-spacing:-.06em}
+.nav ul{display:flex;gap:clamp(12px,2.5vw,32px);list-style:none;margin:0;padding:0;font-size:15px}
+.nav ul a{text-decoration:none;opacity:.85;padding:10px 0}.nav ul a:hover{opacity:1}
+@media(max-width:600px){.brand span:last-child{display:none}.nav ul{gap:12px;font-size:14px}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-rows:1fr auto;background:var(--night);color:#fff}
+.hero-img{position:relative;overflow:hidden}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:drift 24s ease-out both}
+@keyframes drift{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero-band{background:var(--night);padding:clamp(28px,4vw,52px) 0 clamp(28px,4vw,44px)}
+.hero-band .wrap{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.hero h1{font-size:clamp(46px,8vw,104px);margin:8px 0 12px}
+.hero .rule{width:52px;height:4px;background:#3c74ff;margin-bottom:18px}
+.hero small{font-size:15px;color:#c6d1e2}
+.hero .year{font-weight:300;font-size:22px;color:#c6d1e2}
+.hero-action{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.hero-action a{display:inline-flex;align-items:center;min-height:44px;padding:0 21px;border:1px solid #bbc9dd;border-radius:2px;font-size:16px;font-weight:700;text-decoration:none}
+.hero-action a:hover,.hero-action a:focus-visible{background:#fff;color:var(--night)}
+@media(max-width:680px){.hero-action{width:100%;flex-direction:row-reverse;justify-content:space-between;align-items:center}}
+
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:start}
+.me{margin:0}.me img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.me figcaption{font-size:14px;color:var(--muted);padding-top:10px}
+.facts.two{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:34px}.facts.two .note{grid-column:1/-1}
+@media(max-width:600px){.facts.two{grid-template-columns:1fr}}
+.lang{display:flex;border:1px solid #ffffff44;border-radius:999px;padding:2px}
+.lang button{font:inherit;font-size:13px;font-weight:700;color:#fff;background:none;border:0;border-radius:999px;min-width:40px;min-height:36px;cursor:pointer;opacity:.7}
+.lang button[aria-pressed=true]{background:#fff;color:var(--night);opacity:1}
+.lang button:focus-visible{outline:3px solid #8fb0ff;outline-offset:2px}
+.right{display:flex;align-items:center;gap:clamp(12px,2.5vw,28px)}
+@media(max-width:370px){.nav{gap:8px;padding-inline:12px}.nav ul,.right{gap:8px}.lang button{min-width:31px}}
+.intro h2{font-size:clamp(38px,5vw,56px);margin-bottom:26px}
+.facts{display:grid;gap:26px;align-content:start}
+.facts h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.facts p{color:var(--muted);margin:0}
+.note{background:var(--soft);padding:18px 22px;font-weight:700;font-size:15px}
+@media(max-width:820px){.intro .wrap{grid-template-columns:1fr}.me{max-width:260px}}
+
+/* index */
+.works{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:28px 22px;margin-top:34px}
+.card{text-decoration:none;display:block}
+.card figure{margin:0 0 12px;aspect-ratio:4/3;overflow:hidden;background:var(--soft)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover img{transform:scale(1.04)}
+.card h3{font-size:22px;font-weight:700}
+.card span{font-size:15px;color:var(--muted)}
+.card:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+
+/* projects */
+.project{border-top:1px solid var(--line)}
+.project.dark{background:var(--night);color:#fff;border:0;--muted:#b7c3d6;--accent:#8fb0ff;--line:#ffffff22}
+.p-head{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(28px,4vw,52px)}
+.p-head h2{font-size:clamp(40px,6vw,72px)}
+.p-head .lead{margin-bottom:14px}
+.p-head p{color:var(--muted)}
+@media(max-width:820px){.p-head{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(10px,1.4vw,20px)}
+.gallery figure{margin:0;grid-column:span 6}
+.gallery figure.w{grid-column:span 12}.gallery figure.t{grid-column:span 4}.gallery figure.e{grid-column:span 8}
+.gallery button{all:unset;cursor:zoom-in;display:block;width:100%;overflow:hidden;background:#0002}
+.gallery button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.gallery img{width:100%;height:auto;transition:transform .6s}
+.gallery button:hover img{transform:scale(1.02)}
+.gallery figcaption{font-size:14px;color:var(--muted);padding-top:8px}
+.gallery figcaption b{color:var(--accent);font-size:13px;display:block}
+@media(max-width:700px){.gallery figure,.gallery figure.t,.gallery figure.e{grid-column:span 12}}
+.swatches{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+.sw{font-size:13px;color:var(--muted)}.sw i{display:block;width:96px;height:34px;margin-bottom:6px;border:1px solid var(--line)}
+.quote{font-weight:300;font-size:clamp(26px,3vw,36px);line-height:1.2;margin-top:clamp(28px,4vw,48px)}
+
+/* contact */
+.contact{background:var(--night);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,6vw,90px);align-items:start}
+.contact h2{font-size:clamp(44px,7vw,84px)}
+.contact .rule{width:70px;height:4px;background:#3c74ff;margin:30px 0 16px}
+.contact h3{font-size:clamp(30px,3.4vw,42px);margin-bottom:28px}
+.contact .k{font-size:13px;font-weight:700;color:#8fb0ff;margin-bottom:6px}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px;font-size:clamp(17px,2vw,21px)}
+.mail a{text-decoration:none;overflow-wrap:anywhere}
+.btn{font:inherit;font-size:15px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #ffffff55;background:transparent;color:#fff;cursor:pointer}
+.btn:hover{background:#ffffff14}.btn:focus-visible{outline:3px solid #8fb0ff;outline-offset:2px}
+.contact footer{grid-column:1/-1;border-top:1px solid #ffffff22;padding-top:26px;font-size:14px;color:#b7c3d6}
+.contact footer strong{color:#fff;display:block;font-size:16px;margin-bottom:6px}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+
+/* pages */
+[hidden]{display:none!important}
+.view{padding-top:calc(64px + clamp(32px,5vw,72px))}
+.back{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:15px;font-weight:700;color:var(--accent);text-decoration:none;margin-bottom:18px}
+.back:hover{text-decoration:underline}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line);padding-top:28px}
+.pn a{text-decoration:none;display:block;padding:6px 0}.pn a:last-child{text-align:end;grid-column:2}
+.pn small{display:block;font-size:13px;color:var(--muted)}.pn b{font-size:clamp(20px,2.4vw,28px);font-weight:900}
+.pn a:hover b{color:var(--accent)}
+.nav ul a[aria-current=page]{opacity:1;box-shadow:inset 0 -2px #3c74ff}
+.contact.view{min-height:100svh}
+footer.mini{background:var(--night);color:#b7c3d6;font-size:14px}
+footer.mini .wrap{display:flex;justify-content:space-between;gap:16px;padding-block:22px}
+footer.mini a{color:#fff}
+.mini-hidden footer.mini{display:none}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:#050b16f2;display:none;place-items:center;padding:56px 64px}
+.lb.open{display:grid}
+.lb img{max-width:100%;max-height:calc(100svh - 150px);object-fit:contain}
+.lb p{color:#c6d1e2;font-size:15px;text-align:center;margin:14px auto 0}
+.lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:0;background:#ffffff1a;color:#fff;font-size:22px;cursor:pointer}
+.lb button:hover{background:#ffffff33}.lb button:focus-visible{outline:3px solid #8fb0ff}
+.lb .x{top:14px;right:14px}.lb .prev{left:12px;top:50%}.lb .next{right:12px;top:50%}
+@media(max-width:600px){.lb{padding:64px 10px}.lb .prev,.lb .next{top:auto;bottom:14px}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header id="top">
+  <nav class="wrap nav" aria-label="Menu">
+    <a class="brand" href="#home"><span class="mono">RM</span><span>Riccardo Mariani</span></a>
+    <div class="right">
+      <ul>
+        <li><a href="#lavori" data-i="nav1">Lavori</a></li>
+        <li><a href="#chi-sono" data-i="nav2">Chi sono</a></li>
+        <li><a href="#contatti" data-i="nav3">Contatti</a></li>
+      </ul>
+      <div class="lang" role="group" aria-label="Lingua / Language">
+        <button type="button" data-l="it" aria-pressed="true">IT</button>
+        <button type="button" data-l="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+
+
+
+
+<div data-view="home">
+<section class="hero">
+  <div class="hero-img"><img src="img/islanda-26.jpg" alt="Fiume intrecciato tra rilievi innevati, Islanda" data-ia="heroAlt" fetchpriority="high"></div>
+  <div class="hero-band">
+    <div class="wrap">
+      <div>
+        <div class="rule"></div>
+        <small data-i="h1">Portfolio · lavori selezionati</small>
+        <h1>Riccardo Mariani</h1>
+        <small data-i="h2">Fotografia · Identità visiva · Grafica editoriale</small>
+      </div>
+      <div class="hero-action">
+        <span class="year">2026</span>
+        <a href="#lavori" data-i="explore">Esplora i lavori</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="band" id="lavori" style="background:var(--soft)">
+  <div class="wrap">
+    <p class="label" data-i="wl">Lavori selezionati</p>
+    <h2 style="font-size:clamp(36px,4.6vw,52px)" data-i="wt">Otto progetti, tra fotografia e grafica.</h2>
+    <div class="works" id="works"></div>
+  </div>
+</section>
+</div>
+<section class="band intro view" id="chi-sono" data-view="chi-sono" hidden>
+  <div class="wrap">
+    <figure class="me">
+      <img src="img/riccardo.jpg" alt="Riccardo Mariani canta sul palco durante un concerto all'aperto" data-ia="meAlt">
+      <figcaption data-i="meCap">Sul palco, al microfono: la musica è l'altra metà di quello che faccio.</figcaption>
+    </figure>
+    <div>
+      <p class="label" data-i="nav2">Chi sono</p>
+      <h2 data-i="introT">Dallo scatto<br>al progetto.</h2>
+      <p class="lead" data-i="introL">Sono Riccardo Mariani, studente dell'Istituto di Istruzione Superiore Caterina Caniana, indirizzo tecnico Grafica e comunicazione. Unisco fotografia e progettazione grafica per raccontare luoghi, costruire identità e dare forma alle idee.</p>
+      <div class="facts two">
+        <div><h3 data-i="f1h">Il mio contributo</h3><p data-i="f1">Scatto, seleziono e postproduco fotografie. Progetto loghi, sistemi visivi e impaginazioni, con attenzione alla composizione e alla relazione tra immagini e testo.</p></div>
+        <div><h3 data-i="f2h">Strumenti e pratica</h3><p data-i="f2">Canon EOS 6D Mark II · Lightroom · Photoshop · Illustrator. Esperienza anche con riprese video, videointerviste scolastiche e utilizzo di droni.</p></div>
+        <div><h3 data-i="f3h">Oltre la grafica</h3><p data-i="f3">Sono anche musicista: canto, suono chitarra e pianoforte e scrivo canzoni in italiano e in inglese. Lavoro inoltre con un'azienda di ingegneria, dove seguo i social e l'introduzione di agenti AI.</p></div>
+        <div class="note" data-i="note">Le fotografie presentate sono state scattate personalmente da me.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<main id="projects"></main>
+<section class="band contact view" id="contatti" data-view="contatti" hidden>
+  <div class="wrap">
+    <div>
+      <h2 data-i="ct">Guardare.<br>Progettare.<br>Raccontare.</h2>
+      <div class="rule"></div>
+      <small style="color:#b7c3d6" data-i="cs">Fotografia · Grafica · Comunicazione</small>
+    </div>
+    <div>
+      <h3>Riccardo Mariani.</h3>
+      <div class="k">Email</div>
+      <div class="mail">
+        <a href="mailto:riccardo.mariani2009@gmail.com">riccardo.mariani2009@gmail.com</a>
+        <button class="btn" id="copy" type="button" data-i="copy">Copia</button>
+      </div>
+    </div>
+    <footer>
+      <strong data-i="ft1">Tutte le fotografie presentate sono state scattate personalmente da Riccardo Mariani.</strong>
+      <span data-i="ft2">Selezione di lavori personali e scolastici. I marchi istituzionali e la cartografia presenti nel dépliant sono elementi del progetto originale e mantengono i rispettivi riferimenti.</span> © 2026 Riccardo Mariani
+    </footer>
+  </div>
+</section>
+<footer class="mini"><div class="wrap"><span>© 2026 Riccardo Mariani</span><a href="#contatti" data-i="nav3">Contatti</a></div></footer>
+
+
+
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Immagine ingrandita / Enlarged image">
+  <div><img id="lbImg" alt=""><p id="lbCap"></p></div>
+  <button class="x" id="lbX" aria-label="Chiudi">✕</button>
+  <button class="prev" id="lbP" aria-label="Precedente">‹</button>
+  <button class="next" id="lbN" aria-label="Successiva">›</button>
+</div>
+
+<script>
+{
+const P=[
+ {id:'islanda',t:'Islanda',cat:'Fotografia di paesaggio',label:'Erasmus+ · 2025',dark:true,cover:'islanda-16',
+  lead:'Luce, acqua e paesaggio in una selezione di scatti realizzati personalmente durante l\'esperienza Erasmus+.',
+  text:['Il rapporto tra zone illuminate e ombre dà profondità alla scena. Alterno visioni ampie e dettagli per cambiare il ritmo della sequenza: linee che guidano lo sguardo, un soggetto piccolo dentro un campo ampio, la materia dell\'acqua e del ghiaccio, fino al cielo notturno.'],
+  img:[['islanda-16','w','Geyser in controluce','Un istante in cui luce e vapore diventano i protagonisti dell\'inquadratura.'],
+   ['islanda-01','e','Nuvole e rilievi','La luce calda si concentra sulle montagne, lasciando leggere il paesaggio per piani successivi.'],
+   ['islanda-07','t','','Il colore del cielo incontra il mare.'],
+   ['islanda-24','e','Linee che guidano lo sguardo','La strada costruisce la profondità dell\'immagine e accompagna lo sguardo verso i rilievi.'],
+   ['islanda-12','t','Un soggetto, molto spazio','Il vuoto attorno al soggetto è parte della composizione.'],
+   ['islanda-08','','','Riflessi e silhouette in controluce.'],
+   ['islanda-22','','','Cavalli islandesi ai piedi del vulcano.'],
+   ['islanda-02','','Controluce','Sagome, riflessi e luce radente trasformano una scena quotidiana in un\'immagine d\'atmosfera.'],
+   ['islanda-04','','Ritmo e riflessi','La ripetizione delle forme diventa una composizione quasi astratta.'],
+   ['islanda-18','e','Il paesaggio come forma','La forza dell\'acqua e la struttura del ghiaccio offrono texture, contrasti e direzioni.'],
+   ['islanda-20','t','','Acqua, colore e contrasto.'],
+   ['islanda-29','','','La cascata come punto di fuga del paesaggio.'],
+   ['islanda-32','','','Ghiaccio e riflessi: uno studio di superfici.'],
+   ['islanda-37','w','Quando il cielo cambia colore','Uno scatto notturno chiude la selezione: il colore dell\'aurora attraversa il cielo e si riflette sul mare.']],
+  quote:'Osservare prima di scattare.'},
+ {id:'pantelleria',t:'Vivere sulla terra nera',cat:'Reportage a Pantelleria',label:'Reportage fotografico · Pantelleria',cover:'pantelleria-07',
+  lead:'Uomo, lavoro e adattamento: otto fotografie per raccontare un territorio vissuto, non soltanto osservato.',
+  text:['Campi, strade, dammusi e tracce quotidiane costruiscono un racconto del rapporto tra le persone e l\'isola. Ho alternato campi lunghi e dettagli, mantenendo toni caldi e contrasti coerenti lungo la sequenza.'],
+  img:[['pantelleria-03','w','01 · Terra lontana','Il campo lungo introduce il territorio attraverso una successione di piani, campi e rilievi.'],
+   ['pantelleria-04','','02 · Resistere','Un dettaglio naturale, isolato attraverso la profondità di campo, racconta la vita che si adatta al terreno.'],
+   ['pantelleria-05','','03 · Il lavoro','Il paesaggio diventa il contesto di una scena di lavoro quotidiano.'],
+   ['pantelleria-06','','04 · La strada','La prospettiva centrale e le linee convergenti guidano lo sguardo dentro il paesaggio.'],
+   ['pantelleria-07','','05 · Bianco sulla pietra','Il bianco del dammuso emerge tra la pietra scura e la vegetazione.'],
+   ['pantelleria-08','e','06 · Dentro l\'isola','Una cornice naturale costruisce più livelli di profondità e rende la strada il centro del racconto.'],
+   ['pantelleria-09','t','07 · Casa di Theo','Un segno di vita quotidiana.'],
+   ['pantelleria-10','w','08 · Terra sul mare','Le forme del lavoro.']]},
+ {id:'ecomotion',t:'EcoMotion',cat:'Identità visiva',label:'Progetto di marchio',cover:'ecomotion-04',
+  lead:'Un segno che mette in relazione natura e movimento.',
+  text:['Il simbolo dell\'infinito unisce foglia, strada e monopattino in un\'unica composizione. Il progetto comprende il marchio e un manuale con le principali regole di utilizzo: costruzione e proporzioni, colori, lettering in Montserrat Bold e varianti per diversi contesti d\'uso.'],
+  sw:[['#619E31','#619E31'],['#11546E','#11546E']],
+  img:[['ecomotion-04','w','Costruzione e proporzioni','La griglia mette in evidenza i rapporti tra simbolo e lettering.'],
+   ['ecomotion-07','','Colori e lettering','Dal manuale d\'uso.'],['ecomotion-09','','Marchio su fondi diversi','Dal manuale d\'uso.'],
+   ['ecomotion-12','w','Studi del segno','Prove di marchio sviluppate inizialmente.']]},
+ {id:'rm',t:'RM',cat:'Marchio personale',label:'Identità personale',cover:'rm-01',
+  lead:'Un segno personale: le iniziali del mio nome diventano un monogramma.',
+  text:['Il progetto esplora l\'equilibrio tra carattere tipografico, forme essenziali e riconoscibilità. Il manuale raccoglie costruzione, area di rispetto, varianti cromatiche e applicazioni di immagine coordinata.'],
+  sw:[['#000000','Nero'],['#BF4B52','#BF4B52']],
+  img:[['rm-01','w','Copertina del manuale','Monogramma e logotipo su rosso.'],['rm-04','','Struttura del logotipo','Studio del monogramma su griglia.'],
+   ['rm-07','','Colori e lettering',''],['rm-09','','Marchio su fondi diversi',''],
+   ['rm-14','','Carta intestata e busta','L\'applicazione del monogramma rende riconoscibili materiali diversi.'],['rm-15','w','Biglietto da visita','']]},
+ {id:'tre-chicchi',t:'Tre Chicchi',cat:'Progetto di marchio',label:'Prova parallela multimediale',cover:'tre-chicchi-06',
+  lead:'Un\'identità visiva per il mondo del caffè.',
+  text:['Tre chicchi e un segno curvo costruiscono il simbolo. La gamma cromatica richiama il caffè e si accompagna a piccoli accenti verde e rosso. Il percorso comprende prove di composizione, versioni in positivo e negativo e verifiche di riduzione.'],
+  sw:[['#382415','#382415'],['#49603A','#49603A'],['#873228','#873228']],
+  img:[['tre-chicchi-06','w','Logo definitivo','Composizione del logo definitivo.'],['tre-chicchi-02','','Varianti','Disegno al contorno, prova di composizione, fondo scuro.'],
+   ['tre-chicchi-04','','Colori del progetto',''],['tre-chicchi-07','w','Applicazione','Il marchio sul packaging.']]},
+ {id:'parola-immagine',t:'Parola immagine',cat:'Tipografia espressiva',label:'Il significato diventa forma',cover:'parola-immagine-02',
+  lead:'Il disegno delle lettere trasforma la parola nell\'azione che descrive.',
+  text:['In “Selfie” la lettera “e” diventa un occhio e il tratto che segue suggerisce un braccio con un telefono. In “Fall” una lettera che cade: ripetizione e spostamento traducono il significato della parola in un movimento visivo.'],
+  img:[['parola-immagine-02','','Selfie',''],['parola-immagine-03','','Selfie · varianti','Versione in negativo e variante cromatica.'],
+   ['parola-immagine-04','','Fall','La “A” costruisce la sensazione di caduta.'],['parola-immagine-05','','Fall · varianti','Varianti cromatiche e in negativo.']]},
+ {id:'altrove',t:'ALTROVE',cat:'Copertina di rivista',label:'Grafica editoriale',cover:'altrove',
+  lead:'Lo scatto diventa copertina.',
+  text:['Progetto di copertina per una rivista di fotografia e viaggio. L\'immagine originale al tramonto diventa la base per organizzare testata, titoli e richiami editoriali. Fotografia, grafica e impaginazione: Riccardo Mariani.'],
+  img:[['altrove','t','Copertina','N. 01 · Settembre 2026.'],['altrove-scatto','t','Fotografia originale','Lo scatto di partenza: la composizione grafica dialoga con la luce e con gli spazi dell\'immagine.']]},
+ {id:'museo',t:'Museo della Torre',cat:'Dépliant informativo',label:'Progettazione editoriale',cover:'museo-02',
+  lead:'Museo Etnografico della Torre di Comenduno: un percorso da sfogliare.',
+  text:['Progetto di dépliant informativo: fotografie, testi e indicazioni di visita sono organizzati in un percorso visivo tra i pannelli. Continuità delle immagini, ritmo dei pannelli e gerarchie del testo guidano la lettura della parte interna.'],
+  img:[['depliant-1','w','Esterno del dépliant',''],['depliant-2','w','Interno del dépliant','Un percorso da sfogliare.'],
+   ['museo-02','t','Pannello di copertina','La villa con la torre.'],['museo-06','t','','Gli ambienti del museo.'],['museo-08','t','','Dettagli della storia contadina.'],
+   ['museo-04','','','Decorazioni della facciata.'],['museo-07','','','Grano, turco, frumento.']]}
+];
+const UI={
+ it:{nav1:'Lavori',nav2:'Chi sono',nav3:'Contatti',h1:'Portfolio · lavori selezionati',h2:'Fotografia · Identità visiva · Grafica editoriale',
+  explore:'Esplora i lavori',heroAlt:'Fiume intrecciato tra rilievi innevati, Islanda',
+  meCap:"Sul palco, al microfono: la musica è l'altra metà di quello che faccio.",meAlt:"Riccardo Mariani canta sul palco durante un concerto all'aperto",
+  introT:'Dallo scatto<br>al progetto.',introL:"Sono Riccardo Mariani, studente dell'Istituto di Istruzione Superiore Caterina Caniana, indirizzo tecnico Grafica e comunicazione. Unisco fotografia e progettazione grafica per raccontare luoghi, costruire identità e dare forma alle idee.",
+  f1h:'Il mio contributo',f1:'Scatto, seleziono e postproduco fotografie. Progetto loghi, sistemi visivi e impaginazioni, con attenzione alla composizione e alla relazione tra immagini e testo.',
+  f2h:'Strumenti e pratica',f2:'Canon EOS 6D Mark II · Lightroom · Photoshop · Illustrator. Esperienza anche con riprese video, videointerviste scolastiche e utilizzo di droni.',
+  f3h:'Oltre la grafica',f3:"Sono anche musicista: canto, suono chitarra e pianoforte e scrivo canzoni in italiano e in inglese. Lavoro inoltre con un'azienda di ingegneria, dove seguo i social e l'introduzione di agenti AI.",
+  note:'Le fotografie presentate sono state scattate personalmente da me.',wl:'Lavori selezionati',wt:'Otto progetti, tra fotografia e grafica.',
+  ct:'Guardare.<br>Progettare.<br>Raccontare.',cs:'Fotografia · Grafica · Comunicazione',copy:'Copia',copied:'Copiata',copyFail:'Seleziona e copia',
+  ft1:'Tutte le fotografie presentate sono state scattate personalmente da Riccardo Mariani.',ft2:'Selezione di lavori personali e scolastici. I marchi istituzionali e la cartografia presenti nel dépliant sono elementi del progetto originale e mantengono i rispettivi riferimenti.',zoom:'Ingrandisci',back:'Tutti i lavori',prev:'Precedente',next:'Successivo',more:'Altri progetti'},
+ en:{nav1:'Work',nav2:'About',nav3:'Contact',h1:'Portfolio · selected work',h2:'Photography · Visual identity · Editorial design',
+  explore:'Explore my work',heroAlt:'A braided river between snowy ridges in Iceland',
+  meCap:'On stage, at the mic: music is the other half of what I do.',meAlt:'Riccardo Mariani singing on stage at an outdoor concert',
+  introT:'From the shot<br>to the project.',introL:'I am Riccardo Mariani, a student at the Istituto di Istruzione Superiore Caterina Caniana, on the technical track in Graphic Design and Communication. I combine photography and graphic design to tell the story of places, build identities and give shape to ideas.',
+  f1h:'What I do',f1:'I shoot, select and edit photographs. I design logos, visual systems and layouts, paying close attention to composition and to the relationship between image and text.',
+  f2h:'Tools and practice',f2:'Canon EOS 6D Mark II · Lightroom · Photoshop · Illustrator. Also experienced with video shooting, school video interviews and drones.',
+  f3h:'Beyond design',f3:'I am also a musician: I sing, play guitar and piano, and write songs in Italian and English. I also work with an engineering company, where I handle social media and the introduction of AI agents.',
+  note:'All the photographs shown were taken by me.',wl:'Selected work',wt:'Eight projects, between photography and design.',
+  ct:'Look.<br>Design.<br>Tell.',cs:'Photography · Design · Communication',copy:'Copy',copied:'Copied',copyFail:'Select and copy',
+  ft1:'All photographs in this portfolio were taken by Riccardo Mariani.',ft2:'A selection of personal and school projects. Institutional logos and maps in the leaflet are part of the original project and retain their respective references.',zoom:'Enlarge',back:'All work',prev:'Previous',next:'Next',more:'More projects'}};
+const EN={
+'Islanda':'Iceland','Fotografia di paesaggio':'Landscape photography','Erasmus+ · 2025':'Erasmus+ · 2025',
+"Luce, acqua e paesaggio in una selezione di scatti realizzati personalmente durante l'esperienza Erasmus+.":'Light, water and landscape in a selection of photographs I took during my Erasmus+ experience.',
+"Il rapporto tra zone illuminate e ombre dà profondità alla scena. Alterno visioni ampie e dettagli per cambiare il ritmo della sequenza: linee che guidano lo sguardo, un soggetto piccolo dentro un campo ampio, la materia dell'acqua e del ghiaccio, fino al cielo notturno.":'The interplay of light and shadow gives the scene depth. I alternate wide views and details to change the rhythm of the sequence: lines that lead the eye, a small subject in a wide field, the texture of water and ice, all the way to the night sky.',
+'Geyser in controluce':'Backlit geyser',"Un istante in cui luce e vapore diventano i protagonisti dell'inquadratura.":'A moment when light and steam become the subject of the frame.',
+'Nuvole e rilievi':'Clouds and ridges','La luce calda si concentra sulle montagne, lasciando leggere il paesaggio per piani successivi.':'Warm light falls on the mountains, letting the landscape read in layers.',
+'Il colore del cielo incontra il mare.':'The colour of the sky meets the sea.','Linee che guidano lo sguardo':'Lines that lead the eye',
+"La strada costruisce la profondità dell'immagine e accompagna lo sguardo verso i rilievi.":'The road builds depth and carries the eye towards the mountains.',
+'Un soggetto, molto spazio':'One subject, a lot of space','Il vuoto attorno al soggetto è parte della composizione.':'The empty space around the subject is part of the composition.',
+'Riflessi e silhouette in controluce.':'Reflections and backlit silhouettes.','Cavalli islandesi ai piedi del vulcano.':'Icelandic horses at the foot of the volcano.',
+'Controluce':'Backlight',"Sagome, riflessi e luce radente trasformano una scena quotidiana in un'immagine d'atmosfera.":'Silhouettes, reflections and low light turn an everyday scene into an atmospheric image.',
+'Ritmo e riflessi':'Rhythm and reflections','La ripetizione delle forme e i riflessi diventano una composizione quasi astratta.':'Repeated shapes and reflections become an almost abstract composition.',
+'Il paesaggio come forma':'Landscape as form',"La forza dell'acqua e la struttura del ghiaccio offrono texture, contrasti e direzioni.":'The force of water and the structure of ice offer texture, contrast and direction.',
+'Acqua, colore e contrasto.':'Water, colour and contrast.','La cascata come punto di fuga del paesaggio.':'The waterfall as the vanishing point of the landscape.',
+'Ghiaccio e riflessi: uno studio di superfici.':'Ice and reflections: a study of surfaces.','Quando il cielo cambia colore':'When the sky changes colour',
+"Uno scatto notturno chiude la selezione: il colore dell'aurora attraversa il cielo e si riflette sul mare.":'A night shot closes the selection: the colours of the aurora cross the sky and reflect on the sea.',
+'Osservare prima di scattare.':'Look before you shoot.',
+'Vivere sulla terra nera':'Living on the black earth','Reportage a Pantelleria':'Photo story in Pantelleria','Reportage fotografico · Pantelleria':'Photo story · Pantelleria',
+'Uomo, lavoro e adattamento: otto fotografie per raccontare un territorio vissuto, non soltanto osservato.':'People, work and adaptation: eight photographs about a land that is lived in, not just looked at.',
+"Campi, strade, dammusi e tracce quotidiane costruiscono un racconto del rapporto tra le persone e l'isola. Ho alternato campi lunghi e dettagli, mantenendo toni caldi e contrasti coerenti lungo la sequenza.":'Fields, roads, dammusi and everyday traces tell the story of the bond between people and the island. I alternated long shots and details, keeping warm tones and consistent contrast throughout.',
+'01 · Terra lontana':'01 · Distant land','Il campo lungo introduce il territorio attraverso una successione di piani, campi e rilievi.':'The long shot introduces the land through layers of plains, fields and hills.',
+'02 · Resistere':'02 · Enduring','Un dettaglio naturale, isolato attraverso la profondità di campo, racconta la vita che si adatta al terreno.':'A natural detail, isolated with depth of field, shows life adapting to the land.',
+'03 · Il lavoro':'03 · Work','Il paesaggio diventa il contesto di una scena di lavoro quotidiano.':'The landscape becomes the setting for an everyday scene of work.',
+'04 · La strada':'04 · The road','La prospettiva centrale e le linee convergenti guidano lo sguardo dentro il paesaggio.':'Central perspective and converging lines lead the eye into the landscape.',
+'05 · Bianco sulla pietra':'05 · White on stone','Il bianco del dammuso emerge tra la pietra scura e la vegetazione.':'The white dammuso stands out against dark stone and greenery.',
+"06 · Dentro l'isola":'06 · Inside the island','Una cornice naturale costruisce più livelli di profondità e rende la strada il centro del racconto.':'A natural frame builds layers of depth and makes the road the centre of the story.',
+'07 · Casa di Theo':"07 · Theo's house",'Un segno di vita quotidiana.':'A sign of everyday life.','08 · Terra sul mare':'08 · Land above the sea','Le forme del lavoro.':'The shapes of work.',
+'Identità visiva':'Visual identity','Progetto di marchio':'Logo design','Un segno che mette in relazione natura e movimento.':'A mark that connects nature and movement.',
+"Il simbolo dell'infinito unisce foglia, strada e monopattino in un'unica composizione. Il progetto comprende il marchio e un manuale con le principali regole di utilizzo: costruzione e proporzioni, colori, lettering in Montserrat Bold e varianti per diversi contesti d'uso.":'The infinity symbol joins a leaf, a road and a scooter in a single composition. The project includes the logo and a brand manual with the main rules of use: construction and proportions, colours, Montserrat Bold lettering and variants for different contexts.',
+'Costruzione e proporzioni':'Construction and proportions','La griglia mette in evidenza i rapporti tra simbolo e lettering.':'The grid shows the relationship between symbol and lettering.',
+'Colori e lettering':'Colours and lettering',"Dal manuale d'uso.":'From the brand manual.','Marchio su fondi diversi':'Logo on different backgrounds',
+'Studi del segno':'Sketches of the mark','Prove di marchio sviluppate inizialmente.':'Early logo studies.',
+'Marchio personale':'Personal brand','Identità personale':'Personal identity','Un segno personale: le iniziali del mio nome diventano un monogramma.':'A personal mark: the initials of my name become a monogram.',
+"Il progetto esplora l'equilibrio tra carattere tipografico, forme essenziali e riconoscibilità. Il manuale raccoglie costruzione, area di rispetto, varianti cromatiche e applicazioni di immagine coordinata.":'The project explores the balance between typeface, essential shapes and recognisability. The manual covers construction, clear space, colour variants and stationery applications.',
+'Nero':'Black','Copertina del manuale':'Manual cover','Monogramma e logotipo su rosso.':'Monogram and logotype on red.','Struttura del logotipo':'Logotype structure',
+'Studio del monogramma su griglia.':'Monogram study on a grid.','Carta intestata e busta':'Letterhead and envelope',
+"L'applicazione del monogramma rende riconoscibili materiali diversi.":'The monogram makes different materials instantly recognisable.','Biglietto da visita':'Business card',
+'Prova parallela multimediale':'Multimedia exam project',"Un'identità visiva per il mondo del caffè.":'A visual identity for the world of coffee.',
+'Tre chicchi e un segno curvo costruiscono il simbolo. La gamma cromatica richiama il caffè e si accompagna a piccoli accenti verde e rosso. Il percorso comprende prove di composizione, versioni in positivo e negativo e verifiche di riduzione.':'Three beans and a curved stroke form the symbol. The palette recalls coffee, with small accents of green and red. The process includes composition tests, positive and negative versions and reduction checks.',
+'Logo definitivo':'Final logo','Composizione del logo definitivo.':'Final logo composition.','Varianti':'Variants','Disegno al contorno, prova di composizione, fondo scuro.':'Outline drawing, composition test, dark background.',
+'Colori del progetto':'Project colours','Applicazione':'Application','Il marchio sul packaging.':'The logo on packaging.',
+'Parola immagine':'Word as image','Tipografia espressiva':'Expressive typography','Il significato diventa forma':'Meaning becomes form',
+"Il disegno delle lettere trasforma la parola nell'azione che descrive.":'The design of the letters turns the word into the action it describes.',
+'In “Selfie” la lettera “e” diventa un occhio e il tratto che segue suggerisce un braccio con un telefono. In “Fall” una lettera che cade: ripetizione e spostamento traducono il significato della parola in un movimento visivo.':'In “Selfie” the letter “e” becomes an eye and the stroke that follows suggests an arm holding a phone. In “Fall” a letter tumbles: repetition and displacement turn the meaning of the word into visual movement.',
+'Selfie · varianti':'Selfie · variants','Versione in negativo e variante cromatica.':'Negative version and colour variant.','La “A” costruisce la sensazione di caduta.':'The “A” creates the feeling of falling.',
+'Fall · varianti':'Fall · variants','Varianti cromatiche e in negativo.':'Colour and negative variants.',
+'Copertina di rivista':'Magazine cover','Grafica editoriale':'Editorial design','Lo scatto diventa copertina.':'The photograph becomes a cover.',
+"Progetto di copertina per una rivista di fotografia e viaggio. L'immagine originale al tramonto diventa la base per organizzare testata, titoli e richiami editoriali. Fotografia, grafica e impaginazione: Riccardo Mariani.":'Cover design for a photography and travel magazine. My original sunset photograph becomes the base for the masthead, headlines and cover lines. Photography, design and layout: Riccardo Mariani.',
+'Copertina':'Cover','N. 01 · Settembre 2026.':'Issue 01 · September 2026.','Fotografia originale':'Original photograph',
+"Lo scatto di partenza: la composizione grafica dialoga con la luce e con gli spazi dell'immagine.":'The starting shot: the layout works with the light and the open space of the image.',
+'Museo della Torre':'Torre Museum','Dépliant informativo':'Information leaflet','Progettazione editoriale':'Editorial design',
+'Museo Etnografico della Torre di Comenduno: un percorso da sfogliare.':'Ethnographic Museum of the Torre di Comenduno: a journey to leaf through.',
+'Progetto di dépliant informativo: fotografie, testi e indicazioni di visita sono organizzati in un percorso visivo tra i pannelli. Continuità delle immagini, ritmo dei pannelli e gerarchie del testo guidano la lettura della parte interna.':'An information leaflet: photographs, text and visitor information are arranged as a visual path across the panels. Continuous images, panel rhythm and text hierarchy guide the reading of the inside spread.',
+'Esterno del dépliant':'Leaflet, outside','Interno del dépliant':'Leaflet, inside','Un percorso da sfogliare.':'A journey to leaf through.',
+'Pannello di copertina':'Cover panel','La villa con la torre.':'The villa with its tower.','Gli ambienti del museo.':'Inside the museum.','Dettagli della storia contadina.':'Details of rural history.',
+'Decorazioni della facciata.':'Façade decorations.','Grano, turco, frumento.':'Grain, maize, wheat.'};
+let lang='it';try{const q=localStorage.getItem('lang');if(q==='en'||q==='it')lang=q}catch(e){}
+if(location.hash==='#en')lang='en';
+const tr=s=>lang==='en'?(EN[s]??s):s;
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let all=[];
+const render=()=>{
+ const u=UI[lang]; document.documentElement.lang=lang;
+ document.querySelectorAll('[data-i]').forEach(e=>{const v=u[e.dataset.i];if(v!=null)e.innerHTML=v});
+ document.querySelectorAll('[data-ia]').forEach(e=>{e.alt=u[e.dataset.ia]});
+ document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===lang));
+ document.getElementById('works').innerHTML=P.map(p=>`<a class="card" href="#${p.id}"><figure><img src="img/${p.cover}.jpg" alt="" loading="lazy"></figure><h3>${tr(p.t)}</h3><span>${tr(p.cat)}</span></a>`).join('');
+ all=[];
+ document.getElementById('projects').innerHTML=P.map(p=>`
+<section class="band project view${p.dark?' dark':''}" id="${p.id}" data-view="${p.id}" hidden><div class="wrap">
+ <a class="back" href="#lavori">← ${u.back}</a>
+ <div class="p-head"><div><p class="label">${tr(p.label)}</p><h2>${tr(p.t)}.</h2></div>
+ <div><p class="lead">${esc(tr(p.lead))}</p>${p.text.map(t=>`<p>${esc(tr(t))}</p>`).join('')}
+ ${p.sw?`<div class="swatches">${p.sw.map(s=>`<div class="sw"><i style="background:${s[0]}"></i>${tr(s[1])}</div>`).join('')}</div>`:''}</div></div>
+ <div class="gallery">${p.img.map(([f,c,h0,c0])=>{const h=h0?tr(h0):'',cap=c0?tr(c0):'';const i=all.push({f,cap:[h,cap].filter(Boolean).join(' — ')})-1;
+  return `<figure class="${c}"><button type="button" data-i2="${i}" aria-label="${u.zoom}${h?': '+esc(h):''}"><img src="img/${f}.jpg" alt="${esc(cap||h||tr(p.t))}" loading="lazy"></button>${h||cap?`<figcaption>${h?`<b>${esc(h)}</b>`:''}${esc(cap)}</figcaption>`:''}</figure>`}).join('')}</div>
+ ${p.quote?`<p class="quote">${tr(p.quote)}</p>`:''}
+ ${(()=>{const k=P.indexOf(p),a=P[(k+P.length-1)%P.length],b=P[(k+1)%P.length];return `<nav class="pn" aria-label="${u.more}"><a href="#${a.id}"><small>← ${u.prev}</small><b>${tr(a.t)}</b></a><a href="#${b.id}"><small>${u.next} →</small><b>${tr(b.t)}</b></a></nav>`})()}
+</div></section>`).join('');
+ route();
+};
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.l;try{localStorage.setItem('lang',lang)}catch(e){}const y=scrollY;render();scrollTo({top:y,behavior:'instant'})}));
+const hd=document.querySelector('header');
+let view='home';
+const onScroll=()=>hd.classList.toggle('solid',view!=='home'||scrollY>innerHeight*.6);
+addEventListener('scroll',onScroll,{passive:true});
+function route(){
+  let h=location.hash.slice(1)||'home'; let target=null;
+  if(h==='lavori'){h='home';target='lavori'}
+  if(h==='en'||h==='it')h='home';
+  const views=[...document.querySelectorAll('[data-view]')];
+  if(!views.some(v=>v.dataset.view===h))h='home';
+  view=h; views.forEach(v=>v.hidden=v.dataset.view!==h);
+  document.querySelectorAll('.nav ul a').forEach(a=>{const r=a.getAttribute('href').slice(1);const on=(r===h)||(r==='lavori'&&P.some(p=>p.id===h));on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')});
+  document.body.classList.toggle('mini-hidden',h==='contatti');
+  const p=P.find(x=>x.id===h);
+  const sectionTitle=p?tr(p.t):h==='chi-sono'?UI[lang].nav2:h==='contatti'?UI[lang].nav3:'';
+  document.title=sectionTitle?sectionTitle+' — Riccardo Mariani':'Riccardo Mariani | '+(lang==='it'?'Portfolio di fotografia e grafica':'Photography and design portfolio');
+  if(target){requestAnimationFrame(()=>document.getElementById(target).scrollIntoView())} else scrollTo({top:0,behavior:'instant'});
+  onScroll();
+}
+addEventListener('hashchange',route);
+render();
+
+const lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');let cur=0,last=null;
+const show=i=>{cur=(i+all.length)%all.length;li.src='img/'+all[cur].f+'.jpg';li.alt=all[cur].cap;lc.textContent=all[cur].cap};
+const open=i=>{last=document.activeElement;show(i);lb.classList.add('open');document.body.style.overflow='hidden';document.getElementById('lbX').focus()};
+const close=()=>{lb.classList.remove('open');document.body.style.overflow='';last&&last.focus()};
+document.getElementById('projects').addEventListener('click',e=>{const b=e.target.closest('button[data-i2]');if(b)open(+b.dataset.i2)});
+document.getElementById('lbX').onclick=close;
+document.getElementById('lbP').onclick=()=>show(cur-1);
+document.getElementById('lbN').onclick=()=>show(cur+1);
+lb.addEventListener('click',e=>{if(e.target===lb)close()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+
+const cp=document.getElementById('copy');
+cp.onclick=async()=>{const u=UI[lang];try{await navigator.clipboard.writeText('riccardo.mariani2009@gmail.com');cp.textContent=u.copied}catch{cp.textContent=u.copyFail}setTimeout(()=>cp.textContent=UI[lang].copy,2200)};
+}
+</script>
+</body>
+</html>
